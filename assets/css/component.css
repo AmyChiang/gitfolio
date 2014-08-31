@@ -1,0 +1,111 @@
+.grid {
+	padding: 0px 0px 10px 0px;
+	max-width: 1300px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid li {
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	padding: 0px;
+	text-align: left;
+	position: relative;
+}
+
+.grid figure {
+	margin: 0;
+	position: relative;
+}
+
+.grid figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: white;
+	color: black;
+	border: 3px solid black;
+}
+
+.grid figcaption h3 {
+	margin: 0;
+	padding: 0;
+	color: black;
+}
+
+.grid figcaption span:before {
+	content: 'by ';
+}
+
+.grid figcaption a {
+	text-align: center;
+	padding: 0px 13px;
+	border-radius: 6px;
+	display: inline-block;
+	background: black;
+	color: white;
+	text-decoration: none;
+	font-weight: 100;
+}
+
+/* Individual Caption Styles */
+
+/* Caption Style 1 */
+.cs-style-1 figcaption {
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.no-touch .cs-style-1 figure:hover figcaption,
+.cs-style-1 figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: translate(-10px, -10px);
+	-moz-transform: translate(-10px, -10px);
+	-ms-transform: translate(-10px, -10px);
+	transform: translate(-10px, -10px);
+}
+
+.cs-style-1 figcaption h3 {
+	margin-top: 23%;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+.cs-style-1 figcaption span {
+	display: block;
+}
+
+.cs-style-1 figcaption a {
+	margin-top: 6%;
+	font-size: .9em;
+}
+
+@media screen and (max-width: 31.5em) {
+/*	.grid {
+		padding: 10px 10px 10px 10px;
+	}
+*/
+	.grid li {
+		width: 100%;
+	/*  min-width: 300px;*/
+	}
+	.cs-style-1 figcaption h3{
+		margin-top: 17%;
+	}
+}
